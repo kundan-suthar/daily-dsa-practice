@@ -8,7 +8,7 @@ function twoSum(nums, target) {
     if (obj[target - n] !== undefined) {
       return [obj[target - n], i];
     } else {
-      obj[n] = 0;
+      obj[n] = i;
     }
   }
 }
