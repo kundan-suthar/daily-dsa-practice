@@ -3,6 +3,7 @@ function removeDuplicates(nums) {
   for (let i = 0; i < nums.length - 1; i++) {
     if (nums[i] < nums[x]) {
       nums[x] = nums[i];
+      x++
     }
   }
   return { nums, x };
