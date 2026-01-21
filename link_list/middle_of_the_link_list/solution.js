@@ -100,14 +100,20 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
     curr.next = curr.next.next;
     this.size--;
 };
-
+MyLinkedList.prototype.middleOfList =function(head){
+    let slow =fast = this.head;
+    while(fast !=null&& fast.next!=null){
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
+}
 
  let myLinkList = new MyLinkedList()
  myLinkList.addAtHead(5)
  myLinkList.addAtIndex(1,6)
- myLinkList.addAtIndex(1,9)
+ myLinkList.addAtIndex(2,7)
+ myLinkList.addAtIndex(3,9)
  myLinkList.addAtTail(10)
- let secondIndexValue=myLinkList.get(2)
- myLinkList.deleteAtIndex(3)
  console.log(myLinkList);
- console.log(myLinkList.size);
+ console.log(myLinkList.middleOfList(myLinkList.head));
