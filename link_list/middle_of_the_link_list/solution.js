@@ -100,7 +100,7 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
     curr.next = curr.next.next;
     this.size--;
 };
-MyLinkedList.prototype.middleOfList =function(head){
+MyLinkedList.prototype.middleOfList =function(){
     let slow =fast = this.head;
     while(fast !=null&& fast.next!=null){
         slow = slow.next;
@@ -108,7 +108,10 @@ MyLinkedList.prototype.middleOfList =function(head){
     }
     return slow;
 }
+MyLinkedList.prototype.lltoArray = function(head){
 
+}
+///comment to stash my code
  let myLinkList = new MyLinkedList()
  myLinkList.addAtHead(5)
  myLinkList.addAtIndex(1,6)
